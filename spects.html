@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/spects.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>laptop</title>
+</head>
+
+<body>
+    <header>
+        <div class="circle">
+            <div class="logo"></div>
+            <div class="text">
+                <p>Three dots Laptop - 2023</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="home.html">Home</a></li>
+                <li><a class="nav-link" href="spects.html">Spects</a></li>
+                <li><a class="nav-link" href="#">Products</a></li>
+                <li><a class="nav-link" href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <img src="img/cart.svg" alt="icon-cart">
+        </div>
+    </header>
+    <div class="hero">
+        <div class="container">
+            <div class="btn-box">
+                <button id="btn1" onclick="openHTML()"><i class="fa ri-macbook-line"></i>LAPTOP</button>
+                <button id="btn2" onclick="openCSS()"><i class="fa ri-computer-line"></i>DESKTOP</button>
+                <button id="btn3" onclick="openJS()"><i class="fa ri-tablet-line"></i>TABLET</button>
+            </div>
+            <div id="content1" class="content">
+                <div class="content-left">
+                    <h1>ThinkBook 15 Gen 4</h1>
+                    <p>With AMD Ryzen™ 5000 Series Mobile Processors with Radeon™ Graphics, the ThinkBook 15 Gen 4 (15”
+                        AMD) lets you work on demanding applications with ease. Eight mobile cores enable unparalleled
+                        responsiveness and multitasking experience. And with 50% larger fans than the previous
+                        generation, dual heat pipes, and better thermal capacity, you can push your processor to its
+                        fullest potential. Combine this with AI-enabled Intelligent Cooling, you won’t have to worry
+                        about overheating. Plus, enjoy easy automation of routine tasks with Microsoft Power Automate on
+                        Windows 11.</p>
+                    <a href="laptop.html">READ MORE</a>
+                </div>
+                <div class="content-right">
+                    <img src="img/labtop4.png" alt="spects-labtop-png">
+                </div>
+            </div>
+
+            <div id="content2" class="content">
+                <div class="content-left">
+                    <h1>IdeaCentre AIO 3i Gen 7</h1>
+                    <p>The IdeaCentre AIO 3i Gen 7 (27″ Intel) All-in-One PC is designed to handle heavy workloads in a
+                        compact space-saving chassis. Up to 12th Gen Intel ® Core™ processors and optional NVIDIA ®
+                        GeForce graphics deliver performance for non-stop multitasking. Thanks to the high-capacity
+                        solid-state drive, the whole family can store movies, songs and photos with fast boot times,
+                        file transfers and system responsiveness.</p>
+                    <a href="desktop.html">READ MORE</a>
+                </div>
+                <div class="content-right">
+                    <img src="img/desktop1.png" alt="spects-desktop-png">
+                </div>
+            </div>
+
+            <div id="content3" class="content">
+                <div class="content-left">
+                    <h1>Tab M10 Plus Gen 3</h1>
+                    <p>There's nothing like the dazzling, 10.6" 2K IPS display on the Tab M10 Plus Gen 3. Stream your
+                        Netflix, Disney+, and other services at up to 1080p, the maximum video resolution available for
+                        mobile devices. Plus, with TÜV Low Blue Light certification, you can enjoy long, comfortable
+                        hours of screen time—all while the quad speaker system envelops you with sound.</p>
+                    <a href="tablet.html">READ MORE</a>
+                </div>
+                <div class="content-right">
+                    <img src="img/tablet.png" alt="spects-tablet-png">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var content1 = document.getElementById("content1");
+        var content2 = document.getElementById("content2");
+        var content3 = document.getElementById("content3");
+        var btn1 = document.getElementById("btn1");
+        var btn2 = document.getElementById("btn2");
+        var btn3 = document.getElementById("btn3");
+
+        function openHTML() {
+            content1.style.transform = "translateX(0%)"
+            content2.style.transform = "translateX(100%)"
+            content3.style.transform = "translateX(100%)"
+            btn1.style.color = "#c36cbb";
+            btn2.style.color = "#000";
+            btn3.style.color = "#000";
+            content1.style.transitionDelay = "0.3s"
+            content2.style.transitionDelay = "0s"
+            content3.style.transitionDelay = "0s"
+        }
+
+        function openCSS() {
+            content1.style.transform = "translateX(100%)"
+            content2.style.transform = "translateX(0%)"
+            content3.style.transform = "translateX(100%)"
+            btn1.style.color = "#000";
+            btn2.style.color = "#c36cbb";
+            btn3.style.color = "#000";
+            content1.style.transitionDelay = "0s"
+            content2.style.transitionDelay = "0.33s"
+            content3.style.transitionDelay = "0s"
+        }
+
+        function openJS() {
+            content1.style.transform = "translateX(100%)"
+            content2.style.transform = "translateX(100%)"
+            content3.style.transform = "translateX(0%)"
+            btn1.style.color = "#000";
+            btn2.style.color = "#000";
+            btn3.style.color = "#c36cbb";
+            content1.style.transitionDelay = "0.3s"
+            content2.style.transitionDelay = "0s"
+            content3.style.transitionDelay = "0s"
+        }
+    </script>
+
+    <script>
+        const text = document.querySelector('.text p');
+        text.innerHTML = text.innerText.split("").map(
+            (char, i) =>
+            `<span style="transform:rotate(${i * 14.5}deg)">${char}</span>`
+        ).join("")
+    </script>
+</body>
+
+</html>

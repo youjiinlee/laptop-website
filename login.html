@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>laptop</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="circle">
+            <div class="logo"></div>
+            <div class="text">
+                <p>Three dots Laptop - 2023</p>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a class="nav-link" href="home.html">Home</a></li>
+                <li><a class="nav-link" href="spects.html">Spects</a></li>
+                <li><a class="nav-link" href="#">Products</a></li>
+                <li><a class="nav-link" href="login.html">Login</a></li>
+            </ul>
+        </nav>
+        <div class="cart">
+            <img src="img/cart.svg" alt="icon-cart">
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="forms-container">
+            <div class="signin-signup">
+                <form action="#" class="sign-in-form">
+                    <h2 class="title">Sign in</h2>
+                    <div class="input-field">
+                        <i class="fas ri-user-heart-fill"></i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas ri-door-lock-fill"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <input type="submit" value="Login" class="btn solid">
+
+                    <p class="social-text">Or Sign in with sicial platfotms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fas ri-facebook-fill"></i></a>
+                        <a href="#" class="social-icon"><i class="fas ri-google-fill"></i></a>
+                        <a href="#" class="social-icon"><i class="fas ri-twitter-fill"></i></a>
+                        <a href="#" class="social-icon"><i class="fas ri-linkedin-fill"></i></a>
+                    </div>
+                </form>
+
+                <form action="#" class="sign-up-form">
+                    <h2 class="title">Sign up</h2>
+                    <div class="input-field">
+                        <i class="fas ri-user-heart-fill"></i>
+                        <input type="text" placeholder="Username">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas ri-mail-fill"></i>
+                        <input type="text" placeholder="Email">
+                    </div>
+                    <div class="input-field">
+                        <i class="fas ri-door-lock-fill"></i>
+                        <input type="password" placeholder="Password">
+                    </div>
+                    <input type="submit" value="Login" class="btn solid">
+
+                    <p class="social-text">Or Sign up with sicial platfotms</p>
+                    <div class="social-media">
+                        <a href="#" class="social-icon"><i class="fas ri-facebook-fill"></i></a>
+                        <a href="#" class="social-icon"><i class="fas ri-google-fill"></i></a>
+                        <a href="#" class="social-icon"><i class="fas ri-twitter-fill"></i></a>
+                        <a href="#" class="social-icon"><i class="fas ri-linkedin-fill"></i></a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="panels-container">
+            <div class="panel left-panel">
+                <div class="content">
+                    <h3>New here</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci dolores nobis fugit provident
+                        pariatur est quisquam, neque totam, blanditiis facilis, voluptatibus saepe quos? Dolorem
+                        accusamus aspernatur voluptatibus repellendus assumenda iure.</p>
+                    <button class="btn transparent" id="sign-up-btn">Sign up</button>
+                </div>
+
+                <img src="img/log.svg" class="image" alt="login">
+            </div>
+
+            <div class="panel right-panel">
+                <div class="content">
+                    <h3>One of us</h3>
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Adipisci dolores nobis fugit provident
+                        pariatur est quisquam, neque totam, blanditiis facilis, voluptatibus saepe quos? Dolorem
+                        accusamus aspernatur voluptatibus repellendus assumenda iure.</p>
+                    <button class="btn transparent" id="sign-in-btn">Sign in</button>
+                </div>
+
+                <img src="img/register.svg" class="image" alt="register">
+            </div>
+        </div>
+    </div>
+    <script src="js/app.js"></script>
+    <script>
+        const text = document.querySelector(".text p");
+        text.innerHTML = text.innerText
+            .split("")
+            .map(
+                (char, i) =>
+                `<span style="transform:rotate(${i * 14.5}deg)">${char}</span>`
+            )
+            .join("");
+    </script>
+</body>
+
+</html>

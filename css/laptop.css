@@ -1,0 +1,246 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: url(../img/bg2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    width: 90%;
+    height: 10vh;
+    margin: auto;
+    align-items: center;
+}
+
+.circle {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: url(../img/logo.jpg);
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.text {
+    position: absolute;
+    width: 100%;
+    height: 80%;
+    animation: rotateText 13s linear infinite;
+}
+
+@keyframes rotateText {
+    0% {
+
+        transform: rotate(360deg);
+    }
+
+    100% {
+
+        transform: rotate(0deg);
+    }
+
+}
+
+.text span {
+    position: absolute;
+    left: 50%;
+    font-size: 1px;
+    transform-origin: 0 40px;
+    font-weight: 500;
+}
+
+nav {
+    flex: 2;
+}
+
+.logo-container,
+.nav-links,
+.cart {
+    display: flex;
+}
+
+.logo-container {
+    flex: 1;
+}
+
+.nav-links {
+    justify-content: space-around;
+    list-style: none;
+}
+
+.nav-link {
+    color: #000;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #c36cbb;
+}
+
+.cart {
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.box {
+    position: relative;
+    top: 150px;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+}
+
+.box .card {
+    position: relative;
+    background: rgba(255, 255, 255, .1);
+    width: 300px;
+    min-height: 400px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-top: 1px solid rgba(255, 255, 255, .75);
+    border-left: 1px solid rgba(255, 255, 255, .75);
+    border-radius: 20px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .5);
+    transform-style: preserve-3d;
+}
+
+.elements {
+    position: absolute;
+    top: 50px;
+    left: -30px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, .1);
+    transform: translateZ(80px);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-top: 1px solid rgba(255, 255, 255, .75);
+    border-left: 1px solid rgba(255, 255, 255, .75);
+    border-radius: 10px;
+    box-shadow: 0 25px 45px rgba(0, 0, 0, .5);
+}
+
+.elements.bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: url(../img/heart.png);
+    background-size: 60px;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.box:hover .elements.bg::before {
+    opacity: 1;
+}
+
+.elements.imgBx {
+    top: 0;
+    left: initial;
+    right: 60px;
+    width: 120px;
+    height: 120px;
+    padding: 10px;
+    transform: translateZ(120px);
+}
+
+.elements.imgBx img {
+    position: absolute;
+    top: 20px;
+    width: calc(100% - 10px);
+    /* border: 1px solid rgba(255, 255, 255, .5);
+    border-top: 1px solid rgba(255, 255, 255, .75);
+    border-left: 1px solid rgba(255, 255, 255, .75);
+    border-radius: 10px; */
+    /* box-shadow: 0 25px 45px rgba(0, 0, 0, .5); */
+    opacity: 0;
+    transition: 0.8s;
+}
+
+.box:hover .elements.imgBx img {
+    opacity: 1;
+}
+
+.elements.name {
+    top: 255px;
+    right: 50px;
+    left: initial;
+    width: 100%;
+    padding: 10px;
+    text-align: right;
+    transform: translateZ(180px);
+    background: transparent;
+    backdrop-filter: blur(0px);
+    border: none;
+    box-shadow: none;
+    opacity: 0;
+    color: #644651;
+    transition: .5s;
+    transition-delay: .25s;
+}
+
+.box:hover .elements.name {
+    top: 135px;
+    opacity: 1;
+}
+
+.elements.content {
+    top: initial;
+    left: inherit;
+    bottom: 0;
+    left: 50px;
+    width: 85%;
+    min-height: 200px;
+    padding: 10px;
+    transform: translateZ(180px);
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elements.content ul {
+    position: relative;
+    left: 20px;
+    color: #644651;
+    font-size: .75em;
+    transition: .5s;
+    opacity: 0;
+    transition-delay: .25s;
+}
+
+.elements.content li {
+    margin-bottom: 10px;
+}
+
+.box:hover .elements.content ul {
+    opacity: 1;
+}
